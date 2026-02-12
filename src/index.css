@@ -19,22 +19,39 @@
 
 @layer base {
   :root {
-    --radius: 0.5rem;
+    --radius: 12px;
 
     /* Brand Colors (HSL format) */
     --primary: 146 50% 36%;   /* #2e8b57 */
+    --primary-foreground: 0 0% 100%;
     --accent: 47 89% 60%;     /* #f4c430 */
+    --accent-foreground: 222 47% 11%;
 
-    /* Light Theme */
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 100%; 
+    --foreground: 222 47% 11%;      
+  
     --border: 214 32% 91%;
+  
+    --chart-1: 142 71% 45%;
+    --chart-2: 48 96% 53%;
+    --chart-3: 222 47% 11%;
   }
-
+  
   .dark {
     --background: 222 47% 11%;
-    --foreground: 0 0% 98%;
+    --foreground: 210 40% 98%;
+  
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+  
+    --accent: 48 96% 53%;
+    --accent-foreground: 222 47% 11%;
+  
     --border: 217 33% 17%;
+  
+    --chart-1: 142 71% 45%;
+    --chart-2: 48 96% 53%;
+    --chart-3: 210 40% 98%;
   }
 
   * {
