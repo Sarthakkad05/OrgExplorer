@@ -1,15 +1,64 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/**
+ * ------------------------------------------------------------
+ * Global Styles & Theme Tokens
+ * ------------------------------------------------------------
+ * This file defines the base Tailwind layers and theme tokens
+ * used across the project.
+ *
+ * - Update CSS variables inside :root to change brand colors.
+ * - Dark mode is controlled using the `.dark` class on <html>.
+ * - Keep this file minimal — avoid adding component styles here.
+ *
+ * If you modify tokens, ensure Tailwind config stays in sync.
+ * ------------------------------------------------------------
+ */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  :root {
+    --radius: 12px;
+
+    /* Brand Colors (HSL format) */
+    --primary: 146 50% 36%;   /* #2e8b57 */
+    --primary-foreground: 0 0% 100%;
+    --accent: 47 89% 60%;     /* #f4c430 */
+    --accent-foreground: 222 47% 11%;
+
+    --background: 0 0% 100%; 
+    --foreground: 222 47% 11%;      
+  
+    --border: 214 32% 91%;
+  
+    --chart-1: 142 71% 45%;
+    --chart-2: 48 96% 53%;
+    --chart-3: 222 47% 11%;
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+  
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+  
+    --accent: 48 96% 53%;
+    --accent-foreground: 222 47% 11%;
+  
+    --border: 217 33% 17%;
+  
+    --chart-1: 142 71% 45%;
+    --chart-2: 48 96% 53%;
+    --chart-3: 210 40% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }
-
