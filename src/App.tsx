@@ -1,12 +1,8 @@
-import './App.css'
+import "./App.css"
+import DemoShowcase from "./components/common/DemoShowcase"
 
 function App() {
-
-  return (
-    <>
-      <h1>Hello, OrgExplorer!</h1>
-    </>
-  )
+  return <DemoShowcase />
 }
 
 export default App
